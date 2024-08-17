@@ -32,8 +32,8 @@ const Hero: React.FC<SomeComponenProps> = (toggle) => {
     return (
         <>
             <div>
-                {task && task.map((item: ch) => (
-                    <div className='flex gap-[10px] m-[30px]'>
+                {task && task.map((item: ch,i) => (
+                    <div className='flex gap-[10px] m-[30px]' key={i}>
                         <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 min-w-[300px] bg-white dark:bg-zinc-900">
                             <div className='w-[100%] flex flex-row-reverse mr-[10px] gap-4'>
                                 <MdDelete onClick={() => deleteT(item._id!)} className=' cursor-pointer' />
